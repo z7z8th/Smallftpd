@@ -37,9 +37,6 @@
 
  5. History :  
 
-   -  1.0.4 (April 24th 2004):
-          * Redused SmallFtpD.exe file size from 192 KB down to 48 KB - based on idea of Nick Asenov, http://members.fortunecity.com/myeraser/
-
     - 1.0.3 Fix (May 21st 2003) :
           * Fixed a stupid bug concerning transfer performances.
           * disabled debug logging
