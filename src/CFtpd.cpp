@@ -1,4 +1,4 @@
-// Revision : $Id: CFtpd.cpp,v 1.1 2004/04/05 21:26:56 smallftpd Exp $
+// Revision : $Id: CFtpd.cpp,v 1.1.1.1 2004/04/05 21:26:56 smallftpd Exp $
 // Author : Arnaud Mary <smallftpd@free.fr>
 // Project : Smallftpd
 //

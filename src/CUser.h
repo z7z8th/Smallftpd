@@ -1,4 +1,4 @@
-// Revision : $Id: CUser.h,v 1.1 2004/04/05 21:26:54 smallftpd Exp $
+// Revision : $Id: CUser.h,v 1.1.1.1 2004/04/05 21:26:54 smallftpd Exp $
 // Author : Arnaud Mary <smallftpd@free.fr>
 // Project : Smallftpd
 //

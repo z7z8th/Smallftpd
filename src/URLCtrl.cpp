@@ -1,4 +1,4 @@
-//  Revision : $Id: URLCtrl.cpp,v 1.1 2004/04/05 21:26:56 smallftpd Exp $
+//  Revision : $Id: URLCtrl.cpp,v 1.1.1.1 2004/04/05 21:26:56 smallftpd Exp $
 //  Author : J Brown
 //
 //  Implementation of a standalone URL control,
