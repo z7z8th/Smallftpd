@@ -1,4 +1,4 @@
-// Revision : $Id: mylib.cpp,v 1.1 2004/04/05 21:26:55 smallftpd Exp $
+// Revision : $Id: mylib.cpp,v 1.2 2004/04/22 13:35:22 smallftpd Exp $
 // Author : Arnaud Mary <smallftpd@free.fr>
 // Project : Smallftpd
 //
@@ -14,45 +14,20 @@
 #include "const.h"
 
 
-//
-// inStr
+// inStr()
 // returns 0-based index of first occurrence of 'search' in 'src'.
 // returns -1 if not found
-//
 int inStr(char* src, char* search) {
-
-    unsigned int l1;
-    unsigned int l2;
-
-    l1 = strlen(src);
-    l2 = strlen(search);
-
-    if (l2 > l1) return -1;
-
-    unsigned int i;
-    char* buf;
-    buf = (char*)malloc(l2);
-
-    for (i=0; i<l1-l2+1; i++) {
-        memcpy(buf, src+i, l2);
-        buf[l2] = '\0';
-        if (strcmp(buf, search) == 0) {
-            free((void*)buf);
-            return i;
-        }
-    }
-
-    free((void*)buf);
-    return -1;
-
+  
+    search = strstr(src, search);
+    if (search == NULL) return -1;
+    return search - src;
 }
-
-//
-// inList
+    
+// inList()
 // returns 0-based index of 'search' in list of chars 'list'
 // returns -1 if 'search' was not found
 // list must match the following format : 'one\0two\0three\0four\0\0'
-// 
 int inList(char* list, char* search) {
     int index = 0;
     int count = 0;
@@ -70,7 +45,6 @@ int inList(char* list, char* search) {
 // formatSize()
 // input  : size in bytes
 // output : formatted string
-//
 bool formatSize(long size, char *output) {
 
     if (size > 3*1024*1024) {
@@ -149,7 +123,6 @@ long getTimeAge(SYSTEMTIME st1) {
     SystemTimeToFileTime(&st2, &ft2);
 
     return ((ft2.dwLowDateTime - ft1.dwLowDateTime)/10000);
-
 
 }
 
